@@ -5,19 +5,19 @@ Xhevair Duka
 Oct 23,2020
 This program allows the user to type in their body weight and then have the program give them some basic starting macro
 nutrient requirements for their specified fitness goal, e.g. losing weight, maintaining, or gaining weight.
-Nutrition info to understand. Protein and Carbohydrates are 4 calories. Fat is 9 calories. Protein should typically be
-1g per pound of lean body weight.
+Nutrition info to understand. Protein and Carbohydrates are 4 calories per gram, fat is 9 calories per gram.
+Protein should typically be 1g per pound of lean body weight.
 """
 
 
 # Function to calculate shredding or losing weight macros
-def shredMacros(bw):
+def shred_macros(bw):
 
     ShredCals = bw * 13  # Variable to calculate total calories
     ShredProtein = bw  # Variable to calculate total protein
     SProteinCals = ShredProtein * 4  # Variable to calculate total calories of protein
-    Fat = 75  # Variable to store total fat
-    SFatCals = 75 * 9  # Variable to calculate total calories of fat
+    fat = 75  # Variable to store total fat
+    SFatCals = fat * 9  # Variable to calculate total calories of fat
     ShredCarbs = (ShredCals - (SProteinCals + SFatCals)) / 4  # Variable for total carbs.
 
     # Display statements for user
@@ -26,27 +26,27 @@ def shredMacros(bw):
 
 
 # Function to calculate maintenance calories
-def maintainMacros(bw):
+def maintain_macros(bw):
 
-    MainCals = bw * 14
-    MainProtein = bw
-    MProteinCals = MainProtein * 4
-    Fat = 75
-    MFatCals = 75 * 9
-    MainCarbs = (MainCals - (MProteinCals + MFatCals)) / 4
+    MainCals = bw * 14  # Variable to calculate total calories
+    MainProtein = bw  # Variable to calculate total protein
+    MProteinCals = MainProtein * 4  # Variable to calculate total calories of protein
+    fat = 75  # Variable to store total fat
+    MFatCals = fat * 9  # Variable to calculate total calories of fat
+    MainCarbs = (MainCals - (MProteinCals + MFatCals)) / 4  # Variable for total carbs.
 
     print("Your Daily Calories are :", MainCals)
     print("Your Daily Macros are: \nProtein:{}g \nFats:{}g \nCarbs:{}g".format(MainProtein, Fat, MainCarbs))
 
 
 # Function to calculate bulking or gaining weight calories
-def bulkMacros(bw):
+def bulk_macros(bw):
 
     BulkCals = bw * 15
     BulkProtein = bw
     BProteinCals = BulkProtein * 4
-    Fat = 75
-    BFatCals = 75 * 9
+    fat = 75
+    BFatCals = fat * 9
     BulkCarbs = (BulkCals - (BProteinCals + BFatCals)) / 4
 
     print("Your Daily Calories are :", BulkCals)
@@ -68,13 +68,13 @@ while cont == "y":
     ask = int(input())  # variable for user choice
 
     if ask == 1:
-        bulkMacros(bodyWeight)  # Function call
+        bulk_macros(bodyWeight)  # Function call
 
     elif ask == 2:
-        maintainMacros(bodyWeight)  # Function call
+        maintain_macros(bodyWeight)  # Function call
 
     elif ask == 3:
-        shredMacros(bodyWeight)  # Function call
+        shred_macros(bodyWeight)  # Function call
 
     elif ask == 4:
         print("\nThank you. Exiting the program now.")  # Exits program
