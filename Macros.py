@@ -3,7 +3,7 @@
 Calculate Macros
 Xhevair Duka
 Oct 23,2020
-This program allows the user to type in their bodyweight and then have the program give them some basic starting macro
+This program allows the user to type in their body weight and then have the program give them some basic starting macro
 nutrient requirements for their specified fitness goal, e.g. losing weight, maintaining, or gaining weight.
 Nutrition info to understand. Protein and Carbohydrates are 4 calories. Fat is 9 calories. Protein should typically be
 1g per pound of lean body weight.
